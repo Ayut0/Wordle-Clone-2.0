@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yutole</title>
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/2eade893e9.js" crossorigin="anonymous"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./style/modal.css">
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+    <header>
+        <div class="btnCircle">
+            <div class="showRuleModal">?</div>
+        </div>
+        <h1>Yutole - Guess the word -</h1>
+        <div class="theme-toggler">
+            <i class="fa-solid fa-moon" id="switchBtn"></i>
+            <!-- <i class="fa-solid fa-sun"></i> -->
+        </div>
+        <!-- <button id="switchBtn"></button> -->
+    </header>
+    <main>
+        <div class="globalContainer">
+            <div class="modalOverRay"></div>
+            <div id="guessRows" class="guessRows">
+                <div class="guessRows__container">
+                    <div class="firstRow">
+                        <div class="guessWord" ></div>
+                        <div class="guessWord" ></div>
+                        <div class="guessWord" ></div>
+                        <div class="guessWord" ></div>
+                        <div class="guessWord" ></div>
+                    </div>
+                    <div class="secondRow">
+                        <div class="guessWord"></div>
+                        <div class="guessWord"></div>
+                        <div class="guessWord"></div>
+                        <div class="guessWord"></div>
+                        <div class="guessWord"></div>
+                    </div>
+                    <div class="thirdRow">
+                        <div class="guessWord"></div>
+                        <div class="guessWord"></div>
+                        <div class="guessWord"></div>
+                        <div class="guessWord"></div>
+                        <div class="guessWord"></div>
+                    </div>
+                    <div class="fourthRow">
+                        <div class="guessWord"></div>
+                        <div class="guessWord"></div>
+                        <div class="guessWord"></div>
+                        <div class="guessWord"></div>
+                        <div class="guessWord"></div>
+                    </div>
+                    <div class="fifthRow">
+                        <div class="guessWord"></div>
+                        <div class="guessWord"></div>
+                        <div class="guessWord"></div>
+                        <div class="guessWord"></div>
+                        <div class="guessWord"></div>
+                    </div>
+                    <div class="finalRow">
+                        <div class="guessWord"></div>
+                        <div class="guessWord"></div>
+                        <div class="guessWord"></div>
+                        <div class="guessWord"></div>
+                        <div class="guessWord"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="keyboardContainer" class="keyboard">
+                <div class="keyboard__top">
+                    <div class="btn" id="key">Q</div>
+                    <div class="btn" id="key">W</div>
+                    <div class="btn" id="key">E</div>
+                    <div class="btn" id="key">R</div>
+                    <div class="btn" id="key">T</div>
+                    <div class="btn" id="key">Y</div>
+                    <div class="btn" id="key">U</div>
+                    <div class="btn" id="key">I</div>
+                    <div class="btn" id="key">O</div>
+                    <div class="btn" id="key">P</div>
+                </div>
+                <div class="keyboard__middle">
+                    <div class="btn" id="key">A</div>
+                    <div class="btn" id="key">S</div>
+                    <div class="btn" id="key">D</div>
+                    <div class="btn" id="key">F</div>
+                    <div class="btn" id="key">G</div>
+                    <div class="btn" id="key">H</div>
+                    <div class="btn" id="key">J</div>
+                    <div class="btn" id="key">K</div>
+                    <div class="btn" id="key">L</div>
+                </div>
+                <div class="keyboard__bottom">
+                    <input type="button" value="ENTER" id="enterBtn">
+                    <div class="btn" id="key">Z</div>
+                    <div class="btn" id="key">X</div>
+                    <div class="btn" id="key">C</div>
+                    <div class="btn" id="key">V</div>
+                    <div class="btn" id="key">B</div>
+                    <div class="btn" id="key">N</div>
+                    <div class="btn" id="key">M</div>
+                    <input type="button" value="delete" id="deleteBtn">
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+    <!-- <script type="module" src="./getWordApi.js"></script> -->
+    <script type="module" src="./scripts/modal.js"></script>
+    <script type="module" src="./scripts/darkmode.js"></script>
+    <script type="module" src="./scripts/keyboardInput.js"></script>
+    <script type="module" src="./scripts/getWord.js"></script>
+</body>
+</html>
