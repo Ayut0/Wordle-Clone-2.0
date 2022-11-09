@@ -1,0 +1,40 @@
+header h1 {
+  font-size: 1.5em;
+}
+
+main .guessRows__container .firstRow, main .guessRows__container .secondRow, main .guessRows__container .thirdRow, main .guessRows__container .fourthRow, main .guessRows__container .fifthRow, main .guessRows__container .finalRow {
+  width: 170%;
+}
+
+main .guessRows__container .firstRow .guessWord, main .guessRows__container .secondRow .guessWord, main .guessRows__container .thirdRow .guessWord, main .guessRows__container .fourthRow .guessWord, main .guessRows__container .fifthRow .guessWord, main .guessRows__container .finalRow .guessWord {
+  line-height: 60px;
+}
+
+main .keyboard {
+  width: 96%;
+}
+
+main .keyboard__bottom input {
+  padding: 1px;
+  font-weight: 900;
+  font-size: .4em;
+}
+
+.modal {
+  height: 100%;
+  width: 100%;
+  left: 0%;
+  top: 0%;
+}
+
+.modal__inner-explanation {
+  padding-left: 1em;
+  width: 88%;
+}
+
+.resultModal, .failModal {
+  height: 55%;
+  width: 80%;
+  left: 10%;
+}
+/*# sourceMappingURL=600pxup.css.map */

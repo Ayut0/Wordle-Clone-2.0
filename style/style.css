@@ -1,0 +1,261 @@
+body {
+  max-width: 1440px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+body.darkMode {
+  background-color: #121213;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+header h1 {
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  height: 2em;
+  line-height: 2em;
+  font-family: sans-serif;
+  border-bottom: solid 1px black;
+}
+
+header h1.darkMode {
+  color: #fff;
+}
+
+header .showRuleModal {
+  background-color: #EEE;
+  width: 1.5em;
+  line-height: 1.5em;
+  text-align: center;
+  border-radius: 50%;
+  cursor: pointer;
+  position: fixed;
+  top: 0.7em;
+  left: 1em;
+}
+
+header .theme-toggler {
+  position: fixed;
+  top: .2em;
+  right: 1em;
+  padding: .5em .5em;
+  background-color: #dbdbdb;
+  color: #6a6868;
+  cursor: pointer;
+  -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+}
+
+main .globalContainer {
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+}
+
+main .guessRows {
+  width: 90%;
+  margin: 0 auto;
+  height: 50vh;
+  margin-top: 1em;
+}
+
+main .guessRows__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 105%;
+  width: 100%;
+  gap: 0.5em;
+}
+
+main .guessRows__container .firstRow, main .guessRows__container .secondRow, main .guessRows__container .thirdRow, main .guessRows__container .fourthRow, main .guessRows__container .fifthRow, main .guessRows__container .finalRow {
+  height: 16%;
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
+}
+
+main .guessRows__container .firstRow .guessWord, main .guessRows__container .secondRow .guessWord, main .guessRows__container .thirdRow .guessWord, main .guessRows__container .fourthRow .guessWord, main .guessRows__container .fifthRow .guessWord, main .guessRows__container .finalRow .guessWord {
+  height: 100%;
+  width: 8%;
+  font-weight: bold;
+  text-align: center;
+  font-size: 3em;
+  border: solid 1px black;
+}
+
+main .guessRows__container .firstRow .guessWord.greened, main .guessRows__container .secondRow .guessWord.greened, main .guessRows__container .thirdRow .guessWord.greened, main .guessRows__container .fourthRow .guessWord.greened, main .guessRows__container .fifthRow .guessWord.greened, main .guessRows__container .finalRow .guessWord.greened {
+  color: #fff;
+  background-color: #6AAA64;
+  border-color: #6AAA64;
+}
+
+main .guessRows__container .firstRow .guessWord.grayed, main .guessRows__container .secondRow .guessWord.grayed, main .guessRows__container .thirdRow .guessWord.grayed, main .guessRows__container .fourthRow .guessWord.grayed, main .guessRows__container .fifthRow .guessWord.grayed, main .guessRows__container .finalRow .guessWord.grayed {
+  color: #fff;
+  background-color: #787C7E;
+  border-color: #787C7E;
+}
+
+main .guessRows__container .firstRow .guessWord.yellowed, main .guessRows__container .secondRow .guessWord.yellowed, main .guessRows__container .thirdRow .guessWord.yellowed, main .guessRows__container .fourthRow .guessWord.yellowed, main .guessRows__container .fifthRow .guessWord.yellowed, main .guessRows__container .finalRow .guessWord.yellowed {
+  color: #fff;
+  background-color: #B59F3A;
+  border-color: #B59F3A;
+}
+
+main .guessRows__container .firstRow .guessWord.flip, main .guessRows__container .secondRow .guessWord.flip, main .guessRows__container .thirdRow .guessWord.flip, main .guessRows__container .fourthRow .guessWord.flip, main .guessRows__container .fifthRow .guessWord.flip, main .guessRows__container .finalRow .guessWord.flip {
+  -webkit-animation: 1.5s ease flipping;
+          animation: 1.5s ease flipping;
+}
+
+main .guessRows__container .firstRow .guessWord.darkMode, main .guessRows__container .secondRow .guessWord.darkMode, main .guessRows__container .thirdRow .guessWord.darkMode, main .guessRows__container .fourthRow .guessWord.darkMode, main .guessRows__container .fifthRow .guessWord.darkMode, main .guessRows__container .finalRow .guessWord.darkMode {
+  border: solid 1px #fff;
+  color: #fff;
+}
+
+main .guessRows__container .firstRow .guessWord.error, main .guessRows__container .secondRow .guessWord.error, main .guessRows__container .thirdRow .guessWord.error, main .guessRows__container .fourthRow .guessWord.error, main .guessRows__container .fifthRow .guessWord.error, main .guessRows__container .finalRow .guessWord.error {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+@-webkit-keyframes flipping {
+  0%, 100% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+  50% {
+    -webkit-transform: rotateY(90deg);
+            transform: rotateY(90deg);
+  }
+}
+
+@keyframes flipping {
+  0%, 100% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+  50% {
+    -webkit-transform: rotateY(90deg);
+            transform: rotateY(90deg);
+  }
+}
+
+main .keyboard {
+  width: 90%;
+  margin: 0 auto;
+  height: 50vh;
+  padding-top: 4em;
+}
+
+main .keyboard__top, main .keyboard__middle, main .keyboard__bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-column-gap: 0.5em;
+          column-gap: 0.5em;
+  margin-bottom: 15px;
+}
+
+main .keyboard__top .btn, main .keyboard__middle .btn, main .keyboard__bottom .btn {
+  -webkit-box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.7);
+          box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.7);
+  background: #f9f9f9;
+  width: 40px;
+  height: 40px;
+  display: block;
+  border-radius: 3px;
+  text-align: center;
+  font-size: 1.2em;
+  line-height: 2em;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  font-family: sans-serif;
+  font-weight: 600;
+}
+
+main .keyboard__top .btn.darkMode, main .keyboard__middle .btn.darkMode, main .keyboard__bottom .btn.darkMode {
+  background-color: #808384;
+  color: #fff;
+}
+
+main .keyboard__top .btn:hover, main .keyboard__middle .btn:hover, main .keyboard__bottom .btn:hover {
+  -webkit-box-shadow: 0px 0.1px 1px 1px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0.1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.5em;
+  }
+  main .guessRows__container .firstRow, main .guessRows__container .secondRow, main .guessRows__container .thirdRow, main .guessRows__container .fourthRow, main .guessRows__container .fifthRow, main .guessRows__container .finalRow {
+    width: 170%;
+  }
+  main .guessRows__container .firstRow .guessWord, main .guessRows__container .secondRow .guessWord, main .guessRows__container .thirdRow .guessWord, main .guessRows__container .fourthRow .guessWord, main .guessRows__container .fifthRow .guessWord, main .guessRows__container .finalRow .guessWord {
+    line-height: 60px;
+  }
+  main .keyboard {
+    width: 96%;
+  }
+  main .keyboard__bottom input {
+    padding: 1px;
+    font-weight: 900;
+    font-size: .4em;
+  }
+  .modal {
+    height: 100%;
+    width: 100%;
+    left: 0%;
+    top: 0%;
+  }
+  .modal__inner-explanation {
+    padding-left: 1em;
+    width: 88%;
+  }
+  .resultModal, .failModal {
+    height: 55%;
+    width: 80%;
+    left: 10%;
+  }
+}
+/*# sourceMappingURL=style.css.map */

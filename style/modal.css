@@ -1,0 +1,234 @@
+.modalOverRay {
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100vh;
+  width: 100%;
+  z-index: 9;
+}
+
+.modalOverRay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal {
+  height: 86%;
+  width: 50%;
+  position: fixed;
+  left: 25%;
+  top: 10%;
+  -webkit-transition: -webkit-transform 2.5s;
+  transition: -webkit-transform 2.5s;
+  transition: transform 2.5s;
+  transition: transform 2.5s, -webkit-transform 2.5s;
+  -webkit-animation: modalFadeIn 1.2s ease-in-out;
+          animation: modalFadeIn 1.2s ease-in-out;
+  z-index: 10;
+}
+
+.modal h3 {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 0;
+}
+
+.modal__inner {
+  width: 100%;
+  height: 100%;
+  background-color: #f8fafc;
+  border: solid 1px black;
+  border-radius: 10px;
+}
+
+.modal__inner .modalTop {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+.modal__inner .modalTop .modalCloseBtn {
+  line-height: 3em;
+  font-weight: 900;
+  position: absolute;
+  left: 90%;
+  cursor: pointer;
+}
+
+.modal__inner h4 {
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.modal__inner-explanation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  line-height: 1.5em;
+  padding-left: 3em;
+  font-size: 1em;
+  width: 52%;
+  margin: 0 auto;
+}
+
+.modal__inner-example {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5em;
+  margin-top: 1.3em;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.modal__inner-example .examples {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 35%;
+  margin: 0 auto;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 1em;
+}
+
+.modal__inner-example .examples .example-box {
+  border: solid 1px black;
+  padding: 0.5em;
+  font-weight: 900;
+  font-size: 1.3em;
+}
+
+.modal__inner-example .examples .example-box.greened {
+  color: #fff;
+  background-color: #6AAA64;
+  border-color: #6AAA64;
+}
+
+.modal__inner-example .examples .example-box.grayed {
+  color: #fff;
+  background-color: #787C7E;
+  border-color: #787C7E;
+}
+
+.modal__inner-example .examples .example-box.yellowed {
+  color: #fff;
+  background-color: #B59F3A;
+  border-color: #B59F3A;
+}
+
+@-webkit-keyframes modalFadeIn {
+  0% {
+    -webkit-transform: translateY(200%);
+            transform: translateY(200%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+@keyframes modalFadeIn {
+  0% {
+    -webkit-transform: translateY(200%);
+            transform: translateY(200%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+.resultModal, .failModal {
+  height: 50%;
+  width: 50%;
+  position: fixed;
+  left: 25%;
+  top: 25%;
+  -webkit-transition: -webkit-transform 2.5s;
+  transition: -webkit-transform 2.5s;
+  transition: transform 2.5s;
+  transition: transform 2.5s, -webkit-transform 2.5s;
+  -webkit-animation: 2s linear modalFadeIn;
+          animation: 2s linear modalFadeIn;
+  z-index: 11;
+}
+
+.resultModal h3, .failModal h3 {
+  text-align: center;
+  font-size: 2em;
+}
+
+.resultModal span, .failModal span {
+  text-align: center;
+  font-size: 3em;
+  font-weight: bold;
+}
+
+.resultModal__inner, .failModal__inner {
+  width: 100%;
+  height: 100%;
+  background-color: #f8fafc;
+  border: solid 1px black;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.resultModal__inner div, .failModal__inner div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.resultModal__inner .result, .failModal__inner .result {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.resultModal__inner .result span, .failModal__inner .result span {
+  font-size: 2em;
+  gap: 2em;
+}
+/*# sourceMappingURL=modal.css.map */

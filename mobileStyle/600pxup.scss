@@ -1,0 +1,50 @@
+header{
+    h1{
+        font-size: 1.5em;
+    }
+}
+
+main{
+    .guessRows{
+       &__container{
+            .firstRow, .secondRow, .thirdRow, .fourthRow, .fifthRow, .finalRow{
+                width: 170%;
+                .guessWord{
+                    line-height: 60px;
+                }
+            }
+        }
+    }
+    .keyboard{
+        width: 96%;
+        &__bottom{
+            input{
+                padding: 1px;
+                font-weight: 900;
+                font-size: .4em;
+            }
+        }
+    }
+}
+
+//modal
+.modal{
+    height: 100%;
+    width: 100%;
+    left: 0%;
+    top: 0%;
+
+    &__inner{
+
+        &-explanation{
+            padding-left: 1em;
+            width: 88%;
+        }
+    }
+}
+
+.resultModal, .failModal{
+    height: 55%;
+    width: 80%;
+    left: 10%;
+}

@@ -1,0 +1,181 @@
+@import "./variables.scss";
+
+body{
+    max-width: 1440px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+
+    &.darkMode{
+        background-color: $cDkBgColor;
+    }
+}
+
+header{
+    display: flex;
+    width: 100%;
+    h1{
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        height: 2em;
+        line-height: 2em;
+        font-family: sans-serif;
+        border-bottom: solid 1px black;
+
+        &.darkMode{
+            color: #fff;
+        }
+    }
+
+
+    .showRuleModal{
+        background-color: $cModalBg;
+        width: 1.5em;
+        line-height: 1.5em;
+        text-align: center;
+        border-radius: 50%;
+        cursor: pointer;
+        position: fixed;
+        top: 0.7em;
+        left: 1em;
+    }
+
+    .theme-toggler{
+        position: fixed;
+        top: .2em;
+        right: 1em;
+        padding: .5em .5em;
+        background-color: #dbdbdb;
+        color: #6a6868;
+        cursor: pointer;
+        box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
+        border-radius: 50%;
+    }
+}
+
+main{
+    height: 100%;
+    width: 100%;
+    .globalContainer{
+        height: 100%;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .guessRows{
+        width: 90%;
+        margin: 0 auto;
+        height: 50vh;
+        margin-top: 1em;
+        &__container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 105%;
+            width: 100%;
+            gap: 0.5em;
+            .firstRow, .secondRow, .thirdRow, .fourthRow, .fifthRow, .finalRow{
+                height: 16%;
+                width: 60%;
+                display: flex;
+                justify-content: center;
+                column-gap: 10px;
+                .guessWord{
+                    height: 100%;
+                    width: 8%;
+                    font-weight: bold;
+                    text-align: center;
+                    font-size: 3em;
+                    border: solid 1px black;
+
+                    &.greened{
+                        color: $cWhite;
+                        background-color: $cGreen;
+                        border-color: $cGreen;
+                    }
+
+                    &.grayed{
+                        color: $cWhite;
+                        background-color: $cGray;
+                        border-color: $cGray;
+                    }
+
+                    &.yellowed{
+                        color: $cWhite;
+                        background-color: $cYellow;
+                        border-color: $cYellow;
+                    }
+
+                    &.flip{
+                        animation: 1.5s ease flipping;
+                    }
+
+                    &.darkMode{
+                        border: solid 1px #fff;
+                        color: $cWhite;
+                    }
+                }
+
+                .guessWord.error{
+                    transform: scale(1.2);
+                }
+            }
+        }
+    }
+
+    @keyframes flipping {
+        0%, 100%{
+            transform: rotateY(0deg);
+        }
+
+        50%{
+            transform: rotateY(90deg);
+        }
+    }
+
+    .keyboard{
+        width: 90%;
+        margin: 0 auto;
+        height: 50vh;
+        padding-top: 4em;
+
+        &__top, &__middle, &__bottom{
+            display: flex;
+            justify-content: center;
+            column-gap: 0.5em;
+            margin-bottom: 15px;
+            .btn{
+                box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.7);
+                background: rgb(249,249,249);
+                width: 40px;
+                height: 40px;
+                display: block;
+                border-radius: 3px;
+                text-align: center;
+                font-size: 1.2em;
+                line-height: 2em;
+                cursor: pointer;
+                user-select: none;
+                font-family: sans-serif;
+                font-weight: 600;
+
+                &.darkMode{
+                    background-color: $cDkKeyColor;
+                    color: $cWhite;
+                }
+            }
+            .btn:hover{
+                box-shadow: 0px .1px 1px 1px rgba(0, 0, 0, 0.1);
+            }
+        }
+    }
+}
+
+//Mobile design
+@media (max-width: 600px){
+    @import "../mobileStyle/600pxup.scss";
+}
+
+//Dark mode
